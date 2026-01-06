@@ -1,3 +1,12 @@
-<h1 class="text-3xl text-red-400 font-bold underline">
-  Hello world!
-</h1>
+<div class="content-wrapper">
+  <div class="header-section fixed top-0 w-[90%] left-[50%] translate-x-[-50%] mt-6 lg:mt-0! lg:w-full z-100!">
+    <kingdom-header></kingdom-header>
+  </div>
+  <div class="body-wrapper">
+    <router-outlet></router-outlet>
+    <kingdom-loading></kingdom-loading>
+  </div>
+  <div class="footer-section relative w-full">
+    <kingdom-footer></kingdom-footer>
+  </div>
+</div>

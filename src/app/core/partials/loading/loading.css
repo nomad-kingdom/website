@@ -1,0 +1,57 @@
+:host *{
+  padding: 0;
+  margin: 0;
+}
+
+:host{
+    --opening-duration: 2.5s;
+    --opening-delay-duration: 2s;
+}
+
+.gate-container {
+  animation: disappearAfterTime 0.4s ease-in-out 4s forwards;
+}
+
+@keyframes disappearAfterTime {
+    to{
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+.gate-element {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 60%,
+    55% 60%,
+    45% 40%,
+    0% 40%
+  );
+}
+
+.element-top{
+    animation: var(--opening-duration) open-to-up var(--opening-delay-duration) forwards ease-in-out;
+}
+.element-bottom{
+    transform: scale(-1);
+    animation: var(--opening-duration) open-to-down var(--opening-delay-duration) forwards ease-in-out;
+}
+
+@keyframes open-to-up {
+    from{
+        top: 0;
+    }
+    to{
+        top: -100%;
+    }
+}
+@keyframes open-to-down {
+    from{
+        bottom: 0;
+    }
+    to{
+        bottom: -100%;
+    }
+}
