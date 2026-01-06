@@ -33,7 +33,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "kingdom",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
