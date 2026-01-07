@@ -155,7 +155,7 @@ import { ScrambleTextDirective } from "@shared/directives/scramble-text.directiv
       </div>
       <div class="statement bg-(--secondary)/90 py-6">
         <div class="limited-container">
-          <p class="text-(--primary) capitalize font-bold font-['ibm-sans']! text-5xl lg:text-6xl" kingdomScrambleText>Breaking systems to build stronger ones.</p>
+          <p class="text-(--primary) capitalize font-bold font-['ibm-sans']! text-5xl lg:text-6xl">Breaking systems to build stronger ones.</p>
         </div>
       </div>
     </div>
