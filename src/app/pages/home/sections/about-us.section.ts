@@ -1,21 +1,23 @@
 import { Component } from '@angular/core';
+import { TypingText } from "@shared/directives/typing-text.directive";
+import { ScrambleTextDirective } from "@shared/directives/scramble-text.directive";
 
 @Component({
   selector: 'kingdom-about-us',
-  imports: [],
+  imports: [TypingText, ScrambleTextDirective],
   template: `
     <div class="limited-container">
       <div class="about-us-content-wrapper bg-(--secondary) py-16 px-6 lg:px-20 xl-1230:px-28 flex flex-col gap-10">
         <div class="w-full flex gap-10 justify-center lg:justify-start">
-          <h1 class="tag text-(--primary) px-5 w-fit">Sobre Nós_</h1>
+          <h1 class="tag text-(--primary) px-5 w-fit" kingdomScrambleText>Sobre Nós_</h1>
         </div>
         <div class="about-us-content flex flex-col lg:flex-row gap-16 justify-center lg:justify-between items-center lg:items-center">
           <div class="brand lg:min-w-91">
             <img src="/static/lg-brand.svg" class="w-full h-full" alt="">
           </div>
           <div class="cnt flex flex-col gap-8 lg:max-w-105 xl-1230:max-w-175!">
-            <h1 class="text-white font-['ibm-sans']! w-fit font-bold text-[2.688rem] glitched-text" data-text="Quem Somos?">Quem somos?</h1>
-            <p class="text-white">
+            <h1 class="text-white font-['ibm-sans']! w-fit font-bold text-[2.588rem] md:text-[2.688rem]" kingdomTypingText>Quem somos?</h1>
+            <p class="text-white" kingdomScrambleText>
               O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que incluem versões do Lorem Ipsum.
             </p>
           </div>

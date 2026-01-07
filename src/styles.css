@@ -141,7 +141,7 @@ button {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #180101;
+  background: #720707;
   overflow: hidden;
   top: 0;
 }
@@ -288,4 +288,17 @@ button {
   100% {
     clip: rect(83px, auto, 40px, 30px);
   }
+}
+
+/* Typing Effect */
+
+.typing-text::after {
+    content: '▮'; /* ▮ | _ ▯ */
+    margin-left: 4px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
 }
