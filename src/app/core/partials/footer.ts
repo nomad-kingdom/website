@@ -1,10 +1,11 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, inject, PLATFORM_ID } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { ScrambleTextDirective } from "@shared/directives/scramble-text.directive";
 
 @Component({
   selector: 'kingdom-footer',
-  imports: [RouterLink],
+  imports: [RouterLink, ScrambleTextDirective],
   template: `
   <footer class="footer-container">
     <div class="head-content bg-(--secondary)/90 py-12">
