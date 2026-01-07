@@ -1,14 +1,15 @@
 import { Component, signal } from '@angular/core';
+import { ScrambleTextDirective } from "@shared/directives/scramble-text.directive";
 
 @Component({
   selector: 'kingdom-partners',
-  imports: [],
+  imports: [ScrambleTextDirective],
   template: `
     <div class="section-container py-12.5 md:py-25 bg-[url('/images/pattern.png')] bg-repeat-space bg-cover bg-center">
       <div class="limited-container">
         <div class="partners-content-wrapper flex flex-col items-center justify-center gap-6">
-          <div class="head w-full flex gap-10 justify-center lg:justify-start">
-            <h1 h1 class="tag text-(--primary) px-5 w-fit">Parceiros / Clientes</h1>
+          <div class="head w-full flex gap-10 justify-center">
+            <h1 h1 class="tag text-(--primary) px-5 w-fit"  kingdomScrambleText>Parceiros / Clientes</h1>
           </div>
 
           <div class="images-containers flex flex-wrap gap-4 justify-center lg:justify-start items-center">

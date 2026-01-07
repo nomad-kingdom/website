@@ -293,7 +293,7 @@ button {
 /* Typing Effect */
 
 .typing-text::after {
-    content: '▮'; /* ▮ | _ ▯ */
+    content: '|'; /* ▮ | _ ▯ */
     margin-left: 4px;
     animation: blink 1s infinite;
 }
