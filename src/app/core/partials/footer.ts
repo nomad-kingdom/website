@@ -27,13 +27,13 @@ import { RouterLink } from "@angular/router";
               <nav class="">
                 <ul class="flex md:flex-col gap-6 justify-start items-center md:items-start">
                   <li>
-                    <a [routerLink]="['']" class="text-white text-sm">Sobre nós</a>
+                    <a [routerLink]="['']" fragment="about-us" class="text-white text-sm">Sobre nós</a>
                   </li>
                   <li>
-                    <a [routerLink]="['']" class="text-white text-sm">Serviços</a>
+                    <a [routerLink]="['']" fragment="services" class="text-white text-sm">Serviços</a>
                   </li>
                   <li>
-                    <a [routerLink]="['']" class="text-white text-sm">Treinamentos</a>
+                    <a [routerLink]="['']" fragment="training" class="text-white text-sm">Treinamentos</a>
                   </li>
                 </ul>
               </nav>
@@ -41,13 +41,24 @@ import { RouterLink } from "@angular/router";
             <div class="certifications flex flex-col gap-6 md:w-100 pt-7">
               <h3 class="text-white font-bold text-base">Certificações</h3>
               <div class="emblems flex flex-wrap gap-5 md:gap-7.5">
-                <img src="/images/iso.svg" class="w-17.5 object-contain" alt="">
-                <img src="/images/iso.svg" class="w-17.5 object-contain" alt="">
-                <img src="/images/iso.svg" class="w-17.5 object-contain" alt="">
-                <img src="/images/iso.svg" class="w-17.5 object-contain" alt="">
-                <img src="/images/iso.svg" class="w-17.5 object-contain" alt="">
-                <img src="/images/iso.svg" class="w-17.5 object-contain" alt="">
-                <img src="/images/iso.svg" class="w-17.5 object-contain" alt="">
+                <div class="image">
+                  <img src="/images/iso.svg" class="w-full h-full object-contain object-center" alt="">
+                </div>
+                <div class="image">
+                  <img src="/images/iso.svg" class="w-full h-full object-contain object-center" alt="">
+                </div>
+                <div class="image">
+                  <img src="/images/iso.svg" class="w-full h-full object-contain object-center" alt="">
+                </div>
+                <div class="image">
+                  <img src="/images/iso.svg" class="w-full h-full object-contain object-center" alt="">
+                </div>
+                <div class="image">
+                  <img src="/images/award-1.png" class="w-full h-full object-contain object-center" alt="">
+                </div>
+                <div class="image">
+                  <img src="/images/award-2.png" class="w-full h-full object-contain object-center" alt="">
+                </div>
               </div>
             </div>
           </div>
@@ -143,7 +154,7 @@ import { RouterLink } from "@angular/router";
       </div>
       <div class="statement bg-(--secondary)/90 py-6">
         <div class="limited-container">
-          <p class="text-(--primary) capitalize font-bold font-['ibm-sans']! text-5xl lg:text-6xl">Breaking systems to build stronger ones.</p>
+          <p class="text-(--primary) capitalize font-bold font-['ibm-sans']! text-5xl lg:text-6xl" kingdomScrambleText>Breaking systems to build stronger ones.</p>
         </div>
       </div>
     </div>

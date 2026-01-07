@@ -3,22 +3,23 @@ import { ScrollerComponent } from "@shared/components/scroller.component";
 import { InheritParentDimentions } from "@shared/directives/inherit-parent-dimentions";
 import { RouterLink } from "@angular/router";
 import { ScreenService } from '@core/services/screen.service';
+import { TypingText } from "@shared/directives/typing-text.directive";
+import { ScrambleTextDirective } from "@shared/directives/scramble-text.directive";
 
 @Component({
   selector: 'kingdom-services',
-  imports: [ScrollerComponent, InheritParentDimentions, RouterLink],
+  imports: [ScrollerComponent, InheritParentDimentions, RouterLink, TypingText, ScrambleTextDirective],
   template: `
     <div class="limited-container">
       <div class="services-content-wrapper bg-(--secondary) py-24 2xl:py-32 px-6 lg:px-10 xl-1230:px-28! flex flex-col gap-10">
         <div class="w-full flex gap-10 justify-center lg:justify-start">
-          <h1 class="tag text-(--primary) px-5 w-fit">Nossos Serviços_</h1>
+          <h1 class="tag text-(--primary) px-5 w-fit" kingdomScrambleText>Nossos Serviços_</h1>
         </div>
         <div class="services-content flex flex-col gap-16 justify-start items-start">
           <div class="head">
-            <h1 class="text-white font-['ibm-sans']! font-bold text-[2.688rem] mb-5">O que fazemos?</h1>
+            <h1 class="text-white font-['ibm-sans']! font-bold text-[2.688rem] mb-5" kingdomTypingText>O que fazemos?</h1>
             <div class=" flex justify-between items-center">
-              <p class="text-white">Proporcionar serviços profissionais de segurança ofensiva.</p>
-              <div class="scroller-controllers"></div>
+              <p class="text-white" kingdomScrambleText>Proporcionar serviços profissionais de segurança ofensiva.</p>
             </div>
           </div>
 
@@ -44,12 +45,12 @@ import { ScreenService } from '@core/services/screen.service';
                         </svg>
                       </div>
                       <div class="details text-white">
-                        <h2 class="name mb-3 text-(--primary) font-['ibm-sans']! font-medium text-2xl line-clamp-2">{{ item.name }}</h2>
-                        <p class="description line-clamp-4 text-sm">{{ item.description }}</p>
+                        <h2 class="name mb-3 text-(--primary) font-['ibm-sans']! font-medium text-2xl line-clamp-2" kingdomTypingText>{{ item.name }}</h2>
+                        <p class="description line-clamp-4 text-sm" kingdomScrambleText>{{ item.description }}</p>
                       </div>
                       <div class="w-full">
-                        <a [routerLink]="['']" class="cta text-white block relative w-full p-5">
-                          <p class="relative z-2 text-center w-full">Saiba mais</p>
+                        <a [routerLink]="['']" class="cta text-white block relative border border-white rounded-md w-full p-5">
+                          <p class="relative z-2 text-center w-full" kingdomScrambleText>Saiba mais</p>
                         </a>
                       </div>
                     </div>
@@ -107,12 +108,12 @@ import { ScreenService } from '@core/services/screen.service';
                             </svg>
                           </div>
                           <div class="details text-white">
-                            <h2 class="name mb-3 text-(--primary) font-['ibm-sans']! font-medium text-2xl line-clamp-2">{{ service.name }}</h2>
-                            <p class="description line-clamp-4 text-sm">{{ service.description }}</p>
+                            <h2 class="name mb-3 text-(--primary) font-['ibm-sans']! font-medium text-2xl line-clamp-2" kingdomTypingText>{{ service.name }}</h2>
+                            <p class="description line-clamp-4 text-sm" kingdomScrambleText>{{ service.description }}</p>
                           </div>
                           <div class="w-full">
-                            <a [routerLink]="['']" class="cta text-white block relative w-full p-5">
-                              <p class="relative z-2 text-center w-full">Saiba mais</p>
+                            <a [routerLink]="['']" class="cta text-white block relative border border-white rounded-md w-full p-5">
+                              <p class="relative z-2 text-center w-full" kingdomScrambleText>Saiba mais</p>
                             </a>
                           </div>
                         </div>
@@ -198,7 +199,7 @@ import { ScreenService } from '@core/services/screen.service';
   }
 
   .cta{
-    &::before{
+    /* &::before{
       content: '';
       position: absolute;
       z-index: 0;
@@ -226,7 +227,7 @@ import { ScreenService } from '@core/services/screen.service';
         calc(100% - 90%) 100%,
         0% calc(100% - 30px)
       );
-    }
+    } */
   }
 
   .tag {
