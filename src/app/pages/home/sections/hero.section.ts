@@ -7,9 +7,9 @@ import { ScrambleTextDirective } from "@shared/directives/scramble-text.directiv
   selector: 'kingdom-hero',
   imports: [RouterLink, TypingText, ScrambleTextDirective],
   template: `
-    <div class="section-content relative h-[calc(100svh+100px)] bgs-[url('/videos/mascote1.mp4')] bg-no-repeat bg-cover bg-position-[right_-100px_bottom] lg:bg-bottom">
+    <div class="section-content relative h-[calc(100svh+100px)] bg-[url('/images/hero.jpg')] bg-no-repeat bg-cover bg-position-[right_-100px_bottom] lg:bg-bottom">
       <!-- O Vídeo de Fundo -->
-      <video 
+      <!-- <video 
         autoplay 
         muted 
         loop 
@@ -18,7 +18,7 @@ import { ScrambleTextDirective } from "@shared/directives/scramble-text.directiv
         [style.object-position]="'right -100px bottom'">
         <source [src]="mascote()" type="video/mp4">
         Seu navegador não suporta vídeos.
-      </video>
+      </video> -->
 
       <div class="limited-container relative h-full flex justify-center items-center px-4 lg:px-0 z-1">
         <main class="flex flex-col gap-6 mt-10 xl-1230:max-w-[90%]">
