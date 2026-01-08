@@ -1,11 +1,11 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, inject, PLATFORM_ID } from '@angular/core';
 import { RouterLink } from "@angular/router";
-import { ScrambleTextDirective } from "@shared/directives/scramble-text.directive";
+import { ScrambleTextOnHoverDirective } from "@shared/directives/scramble-text-on-hover.directive";
 
 @Component({
   selector: 'kingdom-footer',
-  imports: [RouterLink, ScrambleTextDirective],
+  imports: [RouterLink, ScrambleTextOnHoverDirective],
   template: `
   <footer class="footer-container">
     <div class="head-content bg-(--secondary)/90 py-12">
@@ -28,13 +28,13 @@ import { ScrambleTextDirective } from "@shared/directives/scramble-text.directiv
               <nav class="">
                 <ul class="flex md:flex-col gap-6 justify-start items-center md:items-start">
                   <li>
-                    <a [routerLink]="['']" fragment="about-us" class="text-white text-sm">Sobre nós</a>
+                    <a [routerLink]="['']" fragment="about-us" class="text-white text-sm hover:text-(--primary)" kingdomScrambleTextOnHover>Sobre nós</a>
                   </li>
                   <li>
-                    <a [routerLink]="['']" fragment="services" class="text-white text-sm">Serviços</a>
+                    <a [routerLink]="['']" fragment="services" class="text-white text-sm hover:text-(--primary)" kingdomScrambleTextOnHover>Serviços</a>
                   </li>
                   <li>
-                    <a [routerLink]="['']" fragment="training" class="text-white text-sm">Treinamentos</a>
+                    <a [routerLink]="['']" fragment="training" class="text-white text-sm hover:text-(--primary)" kingdomScrambleTextOnHover>Treinamentos</a>
                   </li>
                 </ul>
               </nav>
@@ -47,18 +47,6 @@ import { ScrambleTextDirective } from "@shared/directives/scramble-text.directiv
                 </div>
                 <div class="image">
                   <img src="/images/iso.svg" class="w-full h-full object-contain object-center" alt="">
-                </div>
-                <div class="image">
-                  <img src="/images/iso.svg" class="w-full h-full object-contain object-center" alt="">
-                </div>
-                <div class="image">
-                  <img src="/images/iso.svg" class="w-full h-full object-contain object-center" alt="">
-                </div>
-                <div class="image">
-                  <img src="/images/award-1.png" class="w-full h-full object-contain object-center" alt="">
-                </div>
-                <div class="image">
-                  <img src="/images/award-2.png" class="w-full h-full object-contain object-center" alt="">
                 </div>
               </div>
             </div>

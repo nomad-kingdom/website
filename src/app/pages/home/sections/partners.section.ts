@@ -79,32 +79,20 @@ export class PartnersSection {
       name: 'ipsum'
     },
     {
-      logo: '/images/logo-2.png',
+      logo: '/images/logo-1.png',
       name: 'ipsum'
     },
     {
-      logo: '/images/logo-3.png',
+      logo: '/images/logo-1.png',
       name: 'ipsum'
     },
     {
-      logo: '/images/logo-4.png',
+      logo: '/images/logo-1.png',
       name: 'ipsum'
     },
     {
-      logo: '/images/logo-5.png',
+      logo: '/images/logo-1.png',
       name: 'ipsum'
-    },
-    {
-      logo: '/images/logo-6.png',
-      name: 'ipsum'
-    },
-    {
-      logo: '/images/logo-7.png',
-      name: 'ipsum'
-    },
-    {
-      logo: '/images/logo-8.png',
-      name: 'ipsum'
-    },
+    }
   ]);
 }
