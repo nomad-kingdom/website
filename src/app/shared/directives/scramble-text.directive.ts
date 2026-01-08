@@ -25,15 +25,17 @@ export class ScrambleTextDirective implements AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     if(!isPlatformBrowser(this.platformId)) return;
 
-    this.originalText.set(this.el.nativeElement.innerHTML.trim());
+    this.originalText.set(this.el.nativeElement.innerText.trim());
     this.el.nativeElement.classList.add("scrambling-text");
+
+    this.el.nativeElement.innerText = this.generateRandomString(this.originalText().length);
 
     this.resolved = Array(this.originalText().length).fill(false);
     this.frameCounters = Array(this.originalText().length).fill(0);
     
     const loadingGateContainer = document.getElementById("loading-gate-container") as HTMLElement;
     if (!loadingGateContainer) {
-      this.startScrumbling();
+      this.setuObserver()
       return;
     }
     loadingGateContainer.addEventListener('animationend', () => {
@@ -48,6 +50,10 @@ export class ScrambleTextDirective implements AfterViewInit, OnDestroy {
   }
 
   private startScrumbling(): void{
+
+    if(this.intervalId) clearInterval(this.intervalId);
+    // this.el.nativeElement.classList.remove("hidden-text");
+
     this.intervalId = window.setInterval(() => {
       let allResolved = true;
       let output = '';
@@ -95,6 +101,19 @@ export class ScrambleTextDirective implements AfterViewInit, OnDestroy {
     });
 
     this.observer.observe(this.el.nativeElement);
+  }
+
+  private generateRandomString(length: number): string {
+    let result = '';
+    for (let i = 0; i < length; i++) {
+      // Mantém espaços onde eles existem no original para preservar o layout
+      if (this.originalText()[i] === ' ') {
+        result += ' ';
+      } else {
+        result += this.randomChar();
+      }
+    }
+    return result;
   }
 
 }

@@ -47,6 +47,7 @@ export class TypingText implements AfterViewInit, OnDestroy {
       const text = this.originalText();
 
       if(this.index >= text.length){
+        this.el.nativeElement.classList.add("completed");
         clearInterval(this.intervalId);
         return;
       }
