@@ -1,14 +1,14 @@
 import { Component, computed, HostListener, inject, signal } from '@angular/core';
 import { ScreenService } from '@core/services/screen.service';
 import { ScrollerComponent } from "@shared/components/scroller.component";
-import { RouterLink } from "@angular/router";
 import { InheritParentDimentions } from "@shared/directives/inherit-parent-dimentions";
 import { TypingText } from "@shared/directives/typing-text.directive";
 import { ScrambleTextDirective } from "@shared/directives/scramble-text.directive";
+import { GlitchedImageDirective } from "@shared/directives/glitched-image.directive";
 
 @Component({
   selector: 'kingdom-training',
-  imports: [ScrollerComponent, RouterLink, InheritParentDimentions, TypingText, ScrambleTextDirective],
+  imports: [ScrollerComponent, InheritParentDimentions, TypingText, ScrambleTextDirective, GlitchedImageDirective],
   template: `
     <div class="limited-container">
       <div class="trainings-content-wrapper bg-(--secondary) py-24 2xl:py-32 px-6 lg:px-10 xl-1230:px-28! flex flex-col gap-10">
@@ -29,8 +29,8 @@ import { ScrambleTextDirective } from "@shared/directives/scramble-text.directiv
                 <ng-template #item let-item>
                   <div id="card" class="card w-77 md:w-85 relative my-3 p-10 hover:drop-shadow-[0_0_7px_var(--primary)]">
                     <div class="card-content h-full relative z-2 flex gap-7 flex-col justify-between">
-                      <div class="image w-full h-71.5">
-                        <img src="{{ item.image }}" class="w-full h-full object-cover object-center" alt="">
+                      <div class="image w-full h-71.5" kingdomGlitchedImage [image]="item.image">
+                        <!-- <img src="{{ item.image }}" class="w-full h-full object-cover object-center" alt=""> -->
                       </div>
                       <div class="details text-white">
                         <h2 class="name mb-3 text-(--primary) font-['ibm-sans']! font-medium text-2xl line-clamp-2" kingdomTypingText>{{ item.name }}</h2>
@@ -79,8 +79,8 @@ import { ScrambleTextDirective } from "@shared/directives/scramble-text.directiv
                     @for (training of item; track $index) {
                       <div id="card" class="card w-95 relative my-3 p-10 hover:drop-shadow-[0_0_7px_var(--primary)]">
                         <div class="card-content h-full relative z-2 flex gap-7 flex-col justify-between">
-                          <div class="image w-full h-71.5">
-                            <img src="{{ training.image }}" class="w-full h-full object-cover object-center" alt="">
+                          <div class="image w-full h-71.5 relative" kingdomGlitchedImage [image]="training.image">
+                            <!-- <img src="{{ training.image }}" class="w-full h-full object-cover object-center" alt=""> -->
                           </div>
                           <div class="details text-white">
                             <h2 class="name mb-3 text-(--primary) font-['ibm-sans']! font-medium text-2xl line-clamp-2" kingdomTypingText>{{ training.name }}</h2>

@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { RouterLink } from "@angular/router";
 import { BodyHeightLimiterDirective } from "@shared/directives/body-height-limiter.directive";
 import { AccordionBodyAdjusterDirective } from "@shared/directives/accordion-body-adjuster.directive";
+import { ScrambleTextOnHoverDirective } from "@shared/directives/scramble-text-on-hover.directive";
 
 @Component({
   selector: 'kingdom-header',
-  imports: [RouterLink, BodyHeightLimiterDirective, AccordionBodyAdjusterDirective],
+  imports: [RouterLink, BodyHeightLimiterDirective, AccordionBodyAdjusterDirective, ScrambleTextOnHoverDirective],
   template: `
     <header class="header-container sticky top-0 z-100! bg-(--secondary)/75 pt-4 backdrop-blur-2xl">
       <div class="limited-container flex justify-between items-center pb-4 px-3 lg:px-0">
@@ -35,13 +36,13 @@ import { AccordionBodyAdjusterDirective } from "@shared/directives/accordion-bod
             <nav>
               <ul class="flex gap-16 justify-center items-center">
                 <li>
-                  <a [routerLink]="['']" fragment="about-us" class=" text-base text-white leading-6">Sobre Nós</a>
+                  <a [routerLink]="['']" fragment="about-us" class=" text-base text-white leading-6 hover:text-(--primary)" kingdomScrambleTextOnHover>Sobre Nós</a>
                 </li>
                 <li>
-                  <a [routerLink]="['']" fragment="services" class=" text-base text-white leading-6">Serviços</a>
+                  <a [routerLink]="['']" fragment="services" class=" text-base text-white leading-6 hover:text-(--primary)" kingdomScrambleTextOnHover>Serviços</a>
                 </li>
                 <li>
-                  <a [routerLink]="['']" fragment="training" class=" text-base text-white leading-6">Treinamentos</a>
+                  <a [routerLink]="['']" fragment="training" class=" text-base text-white leading-6 hover:text-(--primary)" kingdomScrambleTextOnHover>Treinamentos</a>
                 </li>
                 <li>
                   <button class="cursor-pointer text-white flex gap-1.5 justify-center items-center">
@@ -67,13 +68,13 @@ import { AccordionBodyAdjusterDirective } from "@shared/directives/accordion-bod
           <nav>
             <ul class="flex flex-col gap-6">
               <li>
-                <a [routerLink]="['']" fragment="about-us" class=" text-2xl text-white leading-6">Sobre Nós</a>
+                <a [routerLink]="['']" fragment="about-us" class=" text-2xl text-white leading-6 hover:text-(--primary)" kingdomScrambleTextOnHover>Sobre Nós</a>
               </li>
               <li>
-                <a [routerLink]="['']" fragment="services" class=" text-2xl text-white leading-6">Serviços</a>
+                <a [routerLink]="['']" fragment="services" class=" text-2xl text-white leading-6 hover:text-(--primary)" kingdomScrambleTextOnHover>Serviços</a>
               </li>
               <li>
-                <a [routerLink]="['']" fragment="training" class=" text-2xl text-white leading-6">Treinamentos</a>
+                <a [routerLink]="['']" fragment="training" class=" text-2xl text-white leading-6 hover:text-(--primary)" kingdomScrambleTextOnHover>Treinamentos</a>
               </li>
               <li>
                 <button class="cursor-pointer text-white flex gap-1.5 justify-center items-center">
