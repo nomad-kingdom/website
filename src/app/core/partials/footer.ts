@@ -19,11 +19,11 @@ import { ScrambleTextOnHoverDirective } from "@shared/directives/scramble-text-o
           </button>
         </div>
         <div class="details flex flex-col gap-12">
-          <div class="company flex flex-col md:flex-row md:justify-between md:flex-wrap lg:flex-nowrap md:items-stretch 2xl:justify-start! gap-10 2xl:gap-60">
-            <div class="brand">
+          <div class="company flex flex-col md:flex-row md:justify-start md:flex-wrap lg:flex-nowrap md:items-stretch gap-10 xl-1230:gap-0">
+            <div class="brand md:w-[calc(100%/3)] lg:w-[calc(100%/4)]!">
               <img src="/static/vt-logo.svg" class="" alt="">
             </div>
-            <div class="navigation md:w-[60%] lg:w-40 flex flex-col gap-6 pt-7">
+            <div class="navigation md:w-[calc(100%/3)] lg:w-[calc(100%/4)]! flex flex-col gap-6 pt-7">
               <h3 class="text-white font-bold text-base">Navegação</h3>
               <nav class="">
                 <ul class="flex md:flex-col gap-6 justify-start items-center md:items-start">
@@ -39,8 +39,8 @@ import { ScrambleTextOnHoverDirective } from "@shared/directives/scramble-text-o
                 </ul>
               </nav>
             </div>
-            <div class="certifications flex flex-col gap-6 md:w-100 pt-7">
-              <h3 class="text-white font-bold text-base">Certificações</h3>
+            <div class="certifications lg:w-[calc(100%/4)] hidden lg:flex flex-col gap-6 md:w-100 pt-7">
+              <!-- <h3 class="text-white font-bold text-base">Certificações</h3>
               <div class="emblems flex flex-wrap gap-5 md:gap-7.5">
                 <div class="image">
                   <img src="/images/iso.svg" class="w-full h-full object-contain object-center" alt="">
@@ -48,15 +48,16 @@ import { ScrambleTextOnHoverDirective } from "@shared/directives/scramble-text-o
                 <div class="image">
                   <img src="/images/iso.svg" class="w-full h-full object-contain object-center" alt="">
                 </div>
-              </div>
+              </div> -->
             </div>
+            <div class="emptyt lg:w-[calc(100%/4)] hidden lg:block"></div>
           </div>
           <div class="contacts-container flex flex-col gap-6">
             <h3 class="text-white font-bold text-base pb-3.5 border-b border-[#323232]">
               <!-- Contactos -->
             </h3>
-            <div class="contacts flex flex-col md:flex-row md:justify-between md:flex-wrap gap-6">
-              <div class="sm flex flex-col gap-6">
+            <div class="contacts flex flex-col md:flex-row md:justify-start md:flex-wrap lg:flex-nowrap gap-10 xl-1230:gap-0">
+              <div class=" md:w-[calc(100%/3)] lg:w-[calc(100%/4)] flex flex-col gap-6">
                 <h3 class="text-white font-bold text-base">Redes sociais</h3>
                 <div class="social-medias flex gap-5 items-center">
                   <a href="" class="instagram" target="_blank" rel="noopener noreferrer">
@@ -104,7 +105,7 @@ import { ScrambleTextOnHoverDirective } from "@shared/directives/scramble-text-o
                 </div>
               </div>
 
-              <div class="addresses flex flex-col gap-2">
+              <div class="addresses md:w-[calc(100%/3)] lg:w-[calc(100%/4)] flex flex-col gap-2">
                 <h3 class="text-white font-bold text-base">Endereços</h3>
                 <ul class="flex flex-col gap-0 text-white">
                   <li>Nomad  kingdom</li>
@@ -113,7 +114,7 @@ import { ScrambleTextOnHoverDirective } from "@shared/directives/scramble-text-o
                 </ul>
               </div>
 
-              <div class="calling flex flex-col gap-2">
+              <div class="calling md:w-[calc(100%/3)] lg:w-[calc(100%/4)] flex flex-col gap-2">
                 <h3 class="text-white font-bold text-base">Contactos</h3>
                 <ul class="flex flex-col gap-0 text-white">
                   <li>+000 900 000 000</li>
@@ -122,7 +123,7 @@ import { ScrambleTextOnHoverDirective } from "@shared/directives/scramble-text-o
                 </ul>
               </div>
 
-              <div class="email flex flex-col gap-2">
+              <div class="email md:w-[calc(100%/3)] lg:w-[calc(100%/4)] flex flex-col gap-2">
                 <h3 class="text-white font-bold text-base">Email</h3>
                 <ul class="flex flex-col gap-0 text-white">
                   <li>nomadkingdom&commat;geral.com</li>
