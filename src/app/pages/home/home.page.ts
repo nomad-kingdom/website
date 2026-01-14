@@ -5,10 +5,11 @@ import { ServicesSection } from "./sections/services.section";
 import { StatementSection } from "./sections/statement.section";
 import { TrainingSection } from "./sections/training.section";
 import { PartnersSection } from "./sections/partners.section";
+import { CertificationsSection } from "./sections/certifications.section";
 
 @Component({
   selector: 'kingdom-home',
-  imports: [HeroSection, AboutUsSection, ServicesSection, StatementSection, TrainingSection, PartnersSection],
+  imports: [HeroSection, AboutUsSection, ServicesSection, StatementSection, TrainingSection, PartnersSection, CertificationsSection],
   template: `
     <section class="section-container">
       <div class="hero-section"> 
@@ -30,6 +31,9 @@ import { PartnersSection } from "./sections/partners.section";
       </div>
       <div class="partners-section">
         <kingdom-partners></kingdom-partners>
+      </div>
+      <div id="certifications" class="certifications">
+        <kingdom-certifications></kingdom-certifications>
       </div>
     </section>
   `,
